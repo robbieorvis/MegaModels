@@ -1,0 +1,66 @@
+MegaModels Testing Notes
+
+EXTERNAL V2.0 TESTING NOTES
+
+-volatility in natural gas prices built into base scenario?
+-Event where a new distribution utility/company appears and reduces load?
+-Add output on get started that exports team name to check (Team 1 team name)
+-change font size and colors on the summary page
+-double check that CT contributes to the next round
+-Once a policy is selected, grey out option or set as always on
+**-Round 4 to 5 in the export version of the sheet is referencing round 4**
+-Enabled policies on gameplay screen for PIMs/ESM
+
+
+INTERNAL V1.61 TESTING NOTES
+
+-Add earnings sharing mechanism by reducing in half the amount of revenue at stake in PBR models
+-Fix formula on utility revnue sheet that determines revenue available from PBR
+-Make sure payments under PBR are allocated to customers
+-Add in requirements for restructured utilities to meet resource adequacy requirements
+-Add in "most you can support without building more flexible resources"
+-Change text in pop-up for building is that "you can build up to 4 times your current generation mix"
+-Add in pie charts for existing capacity in round summary box
+-soft stop on resource adequacy when under restructured
+-Fix distribution amount buildable name range
+-Fix reliability additional transmission built (referencing c100 not c99)
+-RoR for restructured utilities on transmission should be equal to WACC
+
+
+INTERNAL V1.44 TESTING NOTES
+-Intro Page
+	-Remove the word "Regulatory" from biz model description (check if this is possible without destroying the game); can't do this
+	-Change the text to from 10 years to 5 rounds (10 years)
+	-Typo in profitability
+	-word wrap the first question and question 4
+	- change text from "build too quickly" to if you don't "you'll need to make sure the system is flexible enough to integrate these"
+	-"How will you take advantage of these cheap new sources of power"
+-Gameplay
+	-Lower batteries (reliability) to 10 MW installed
+	-Reduce distribution system infrastcure flexibility points per resource from 0.01 to 0.005 or lower
+	-Change capacity build "solar" to "utility scale solar"
+	-Cancel on Add Policy doesn't work
+	-Increase fixed charges isn't offsetting the amount that goes to variable charges on the utility revenue sheet
+	-double check utility revenue sheet to make sure it's not double counting costs
+	-Check the efficiency installation effect on EPS
+	-Turn on limitation on advancing if not enough capacity in vertical
+	-Reliability not being improved from extra distribution system infrastructure
+	-Buildling distriution system infrastructure not getting added on Reliability sheet
+	-Change customer bill print out axis to zero not dynamic
+	-make shares dynamic based on type of biz model
+	-for wind and solar generation lower the buildable increments size
+	- vertically align resource constraints box
+	- fix distribution system infrastructure interval
+	- widen balancing area multiplier turning on for all rounds when activated
+	- Add PTC and ITC for utility scale wind and solar
+	- "Advance to next round" for final turn should say something else
+	- disable performance incentive mechanism policy when in PBR
+
+
+
+
+
+
+
+
+
