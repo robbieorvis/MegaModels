@@ -1,4 +1,308 @@
-MegaModels Change Log
+MegaModels Game Change Log
 
-v1.0-1.16
--Initial releases and testing
+v 1.17
+-Beta
+
+v 1.18
+-Fixed conditional formatting issues by creating named ranges
+
+v 1.19
+-Fixed reserve margin error and business model name for vertical PBR
+
+v 1.20
+-Fixed upper/lower bounds on resource selection
+
+v 1.21
+-Fixed issue with widening balancing areas not having effect (typo)
+
+v 1.22
+-Fixed building both contracted generation and capacity in restructured models
+
+v 1.23
+-Fixed transactive/restructured autmoated buildout to not retroactively change bills
+-Fixed reliability calculation
+-Updated buildout shares to fix math error
+-Updated DR and battery buildout under transactive model and associated VBA script
+
+v 1.24
+-FIxed bug where efficiency not limited in contributing to reliability improvement
+
+v 1.25
+-Fixed bug where too much contracted generation allowed in resturctured business model
+
+v 1.26
+-Fixed error where events didn't work after round 1
+-Fixed error where wind and solar PV costs not decreasing over time
+
+v 1.27
+-Added in game summary screen
+
+v 1.28
+-Added capacity popup menu and data holding area on event tracker tab
+
+v 1.29
+-added generation option for popup menu and adjusting selection options
+-added capacity/generation button on gameplay tab with dynamic title
+
+v 1.30
+-added in popup for building new flexibility resources and integrated with existing structure
+-added conditional formatting for flexibility and resource constraints
+
+v 1.31/1.32
+-fixed error in revenue referencing PIMs (was referencing a separate policy)
+-added policy popup menu
+
+v 1.33
+-Added event popup menu
+
+v 1.34
+-Fixed game summary chart issue
+-Updated advance to next round to reflect final turn of game
+-Fixed reliability popup menu
+-Added "None" to policy popup menu
+
+v 1.35
+-Incorporated back-in limits to advancing for sharing
+-Reformatted gameplay page
+
+v 1.36
+-removed limits to enable editing
+
+v 1.37
+-Removed hydro as an option from capacity/generation
+-Added and fixed distributed PV as an option
+-Fixed bug not allowing distributed PV to contribute to distribution system reliability
+
+v 1.38
+-Combined utility and customer energy efficiency into a single energy efficiency option
+-Fixed distributed PV and EE endogenous growth
+-Fixed policies being off one year
+-Fixed game summary (again); finally address chart issue
+
+v 1.39
+-Broke apart round summary into round summary and new round information
+-switched all references in VBA script to named ranges
+-Moved text from "Graphs" tab to "Popup Descriptions" tab - this will allow for easier editing in the future
+-Fixed bugs on final summary page (previously only describing round 4->5 progress, not 0->5 progress)
+
+v 1.40
+-Fixed error with reserve margin requirement in popup menu
+-Calibrated historical spending recovery to align bills
+-Fixed error with game summary where color of EPS was opposite
+-Increased number of shares to lower earnings per share
+
+v 1.41
+-Added undo button to go back to previous round
+
+v 1.42
+-Fixed override sheet and integrated with event tracker sheet
+
+v 1.43 
+-Hid tabs for sharing and re-enabled restrictions
+
+v 1.44
+-Removed Transactive from the business model drop down list
+
+INTERNAL V 1.44 TESTING NOTES
+-Intro Page
+	-Remove the word "Regulatory" from biz model description (check if this is possible without destroying the game); can't do this
+	-Change the text to from 10 years to 5 rounds (10 years)
+	-Typo in profitability
+	-word wrap the first question and question 4
+	- change text from "build too quickly" to if you don't "you'll need to make sure the system is flexible enough to integrate these"
+	-"How will you take advantage of these cheap new sources of power"
+-Gameplay
+	-Lower batteries (reliability) to 10 MW installed
+	-Reduce distribution system infrastcure flexibility points per resource from 0.01 to 0.005 or lower
+	-Change capacity build "solar" to "utility scale solar"
+	-Cancel on Add Policy doesn't work
+	-Increase fixed charges isn't offsetting the amount that goes to variable charges on the utility revenue sheet
+	-double check utility revenue sheet to make sure it's not double counting costs
+	-Check the efficiency installation effect on EPS
+	-Turn on limitation on advancing if not enough capacity in vertical
+	-Reliability not being improved from extra distribution system infrastructure
+	-Buildling distriution system infrastructure not getting added on Reliability sheet
+	-Change customer bill print out axis to zero not dynamic
+	-make shares dynamic based on type of biz model
+	-for wind and solar generation lower the buildable increments size
+	- vertically align resource constraints box
+	- fix distribution system infrastructure interval
+	- widen balancing area multiplier turning on for all rounds when activated
+	- Add PTC and ITC for utility scale wind and solar
+	- "Advance to next round" for final turn should say something else
+	- disable performance incentive mechanism policy when in PBR
+	
+v 1.45
+-Turned of Gameplay page restriction
+-Turned off error message on Initial Setup Page (get started button)-Revised Background text to reflect 5 rounds
+-Initial Setup Page Edits
+	-Fixed typo with profitability
+	-Merged and left aligned with word wrap text in 1, 2, and 4
+	-Updated text for 3
+
+v 1.46
+-Lowered Initial Installed Peaking Resources (MW): Batteries on Reliability tab to 10 MW
+-Reduced Distribution System Infrastructure flexibility points per resources from 0.01 to 0.005 on Reliability tab
+
+v 1.47
+-Updated Build Capacity/Contract for Generation popup to say "Utility-Scale Solar PV" instead of "Solar"
+
+v 1.48
+-Fixed issue with Cancel button on Add Policy popup not canceling selections
+
+v 1.49
+-Fixed issues with customer bills not dividing fixed charges by 12 months
+-Upped existing system cost to move bills to average national cost
+
+v 1.50
+-Utilities no longer earn a return on Distributed PV (updated cost rate to RoR instead of WACC)
+
+v 1.51
+-Fixed error with reserve margin popup not showing
+
+v 1.52
+-Fixed error with distribution infrastructure additions not carrying over to reliability tab
+
+v 1.53
+-Reset graphs for end game popup to fix at zero for minimum on x axis.
+-Made number of shares dynamic based on utility business model, aiming for ~$2 earnings per share
+
+v 1.54
+-Updated amount buildable for certain types in restructured business models to create more options
+
+v 1.55
+-Vertically and left aligned current policies, reliability requirements, and resource constraints boxes
+
+v 1.56
+-Fixed max distribution buildable and changed increment size
+
+v 1.57
+-Fixed error where widening balancing areas policy was being applied in all years once turned on
+
+v 1.58
+-Changed text for advance round popup box and at end of round 5
+
+v 1.59
+-Updated utility-scale solar costs to include the ITC
+-Updated wind costs to include the PTC
+
+v 1.60
+-Update add policy sheet to hide PIMs if player is already in PBR form of business model
+
+v 1.61
+-Re-enabled gameplay restriction
+-Turn on error messages on start page
+
+INTERNAL V 1.61 TESTING NOTES
+
+-Add earnings sharing mechanism by reducing in half the amount of revenue at stake in PBR models
+-Fix formula on utility revnue sheet that determines revenue available from PBR
+-Make sure payments under PBR are allocated to customers
+-Add in requirements for restructured utilities to meet resource adequacy requirements
+-Add in "most you can support without building more flexible resources"
+-Change text in pop-up for building is that "you can build up to 4 times your current generation mix"
+-Add in pie charts for existing capacity in round summary box
+-soft stop on resource adequacy when under restructured
+-Fix distribution amount buildable name range
+-Fix reliability additional transmission built (referencing c100 not c99)
+-RoR for restructured utilities on transmission should be equal to WACC
+
+
+v 1.62
+-Disabled intial setup and gameplay sheet restrictions/pop-ups
+-fixed formula on utility revenue sheet that determines revenue available from PBR
+-added RPS ACP penalties to costs and revenues
+-added PBR charges to customer bills and adjusted performance incentive to not account for these charges
+
+v 1.63
+-Fixed distribution system buildable values by correcting named range
+-Fixed reliability additional transmission built (updated reference)
+-Fixed transmission investment being earned on in restructured model (and other issues)
+
+v 1.64
+-Added in red highlight and values for restructured utilities to meet resource adequacy requirements
+-Added popup for restructured utilities indicating that market will build necessary resources if players don't
+
+v 1.65
+-Changed popup information for how much you can build to state four times and include the amount
+
+v 1.66
+-Updated round intro text to say "the most capacity/generation you can support this round without building more flexible resources is:"
+
+v 1.67
+-Added pie charts for capacity/generation into round summary box and round intro box
+-Fixed error with calculation of additional capacity needed
+-Updated conditional formatting to reference named range
+
+v 1.68
+-Added in earnings sharing mechanism
+-Updated reliability reserve margin calculations
+-Fixed error with restructured utilities earning on generation resources
+-Fixed error in PBR calculation (customer bills)
+-Fixed error on utility revenue sheet where solar and wind cost declines weren't incorporated
+
+v 1.69
+-Turned back on warnings/popups/restrictions
+-Hid extra tabs
+
+v 1.70
+-Updated text to include two significant figures in popup windows
+-Update buildable increments for distribution and transmission infrastructure to 500 MW down from 2,000 MW
+
+v 1.71
+-Fixed error allowing energy efficiency to contribute more than 15% to total load
+
+v 2.0
+-Fixed erorr menus offering more DR than in drop down
+-lowered T&D buildable to 2x existing capacity
+-added in capability to limit DR buildable based on 15% of peak demand.
+-Hid extra tabs
+
+v 2.0 Launch Notes
+-volatility in natural gas prices built into base scenario?
+-Event where a new distribution utility/company appears and reduces load?
+-Add output on get started that exports team name to check (Team 1 team name)
+-change font size and colors on the summary page
+-double check that CT contributes to the next round
+-Once a policy is selected, grey out option or set as always on
+**-Round 4 to 5 in the export version of the sheet is referencing round 4**
+-Enabled policies on gameplay screen for PIMs/ESM
+
+v 2.01
+-Fixed error on customer bills page where earnings sharing mechanism savings had the wrong sign (pos/neg) and allowed negative values
+-Fixed error on customer bills page where earnings sharing mechanism savings were being divided by 12 twice
+-Fixed error where utility cost WACC was not tracking the utility business model type correctly
+-Fixed error with calculation of max available flexibility points with wind
+-Fixed error on export tab where team results were one round ahead in rounds 4 and 5
+
+v 2.02
+-Updated export function to export folder name as file name with results
+
+v 2.03
+-Fixed error with reliabilty export data not locking to referenced range
+
+v 2.04
+-Revised renewables requirement text to not run over dialog box
+-Updated Team Results file to include targets (these are fixed values)
+
+v 2.05
+-Updated the number of teams from 10-20 (required no change in core Excel file)
+-Updated TeamResults.xlsm file to allow for 20 teams.
+
+v 2.06
+-Updated Game Properties tab to make sure drop down capacity numbers go high enough.
+
+v 2.07
+-Updated power plant charactersitics on Game Assumptions tab
+-Updated years in game and charts to reflect current year + 2 year increments. Should dynamically keep the model up to date in the future.
+
+
+
+
+
+
+
+
+
+
+
